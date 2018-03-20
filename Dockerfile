@@ -1,14 +1,18 @@
 FROM kernsuite/base:dev
 MAINTAINER gijsmolenaar@gmail.com
 
+    #bitshuffle \
 RUN docker-apt-install \
     bl-sigproc \
+    turbo-seti \
     blimpy \
     presto \
     tempo \
     bl-dspsr \
     tempo2 \
     psrchive \
+    peasoup \
+    python-guppi-daq \
     python-astropy \
     libcfitsio-dev \
     python-scipy \

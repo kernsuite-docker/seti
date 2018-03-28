@@ -1,25 +1,26 @@
 FROM kernsuite/base:dev
 MAINTAINER gijsmolenaar@gmail.com
 
-    #bitshuffle \
 RUN docker-apt-install \
     bl-sigproc \
     turbo-seti \
+    gbt-seti \
     blimpy \
     presto \
     tempo \
     bl-dspsr \
     tempo2 \
     psrchive \
+    psrdada \
     peasoup \
     python-guppi-daq \
+    python-shm \
+    python-slalib \
+    python-bitshuffle \
     python-astropy \
-    libcfitsio-dev \
     python-scipy \
     python-ephem \
-    libhdf5-dev \
     gnuplot \
-    nvidia-cuda-dev \
     ganglia-monitor \
     ruby \
     csh \
@@ -27,17 +28,21 @@ RUN docker-apt-install \
     mysql-client \
     php-mysql \
     pgplot5 \
-    libfftw3-dev \
     python-numpy \
     python-h5py \
     python-pandas \
     python-matplotlib \
     python-notebook \
     python-ipython \
-    python-pip \
-    libstdc++-5-dev \
-    libstdc++-6-dev \
-    libmongo-client-dev
+    python-pip
+
+#nvidia-cuda-dev \
+#libhdf5-dev \
+#libfftw3-dev \
+#libstdc++-5-dev \
+#libstdc++-6-dev \
+#libmongo-client-dev
+#libcfitsio-dev \
 
 
 RUN pip install jupyterlab bokeh
